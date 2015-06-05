@@ -1,0 +1,9 @@
+<form action="/planes/<%= @plane.id %>" method="post">
+  <input name="update" type="hidden" value="put">
+  <input type="text" name="plane[name]" value="<%= @plane.name %>"> <br>
+  <input type="text" name="plane[design]" value="<%= @plane.design %>"> <br>
+  <textarea rows="5" cols="25" name="plane[description]" ><%= @plane.description %></textarea> <br>
+  <%= token_tag form_authenticity_token %>
+  
+  <button> Update Plane </button>
+</form>

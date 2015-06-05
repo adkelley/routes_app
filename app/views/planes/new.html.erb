@@ -1,0 +1,18 @@
+<!-- A form to create plane -->
+
+<!--
+    on submit send a POST /planes
+    
+    This is synomous with a CREATE
+    /planes is the minimal information we need
+    to know what kind of resource to create
+-->
+
+<form action="/planes" method="post">
+  <input type="text" name="plane[name]" placeholder="name"><br>
+  <input type="text" name="plane[design]" placeholder="design"><br>
+  <textarea name="plane[description]" placeholder="description"></textarea><br>
+  <%= token_tag form_authenticity_token %>
+
+  <button> Save Plane </button>
+</form>
